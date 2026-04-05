@@ -5,6 +5,7 @@ export async function GET() {
     const count = await kv.incr("visitors");
     return Response.json({ count });
   } catch (error) {
-    return Response.json({ count: 0, error: "KV error" });
+    console.error(error);
+    return Response.json({ count: 0 });
   }
 }
