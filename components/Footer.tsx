@@ -1,5 +1,5 @@
 import VisitorCount from "@/components/VisitorCount";
-
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 <VisitorCount />
 export default function Footer() {
   return (
@@ -11,13 +11,13 @@ export default function Footer() {
 
       <div className="flex justify-center gap-6 text-sm">
         <a href="https://github.com/abhiMhere" target="_blank" className="hover:text-white">
-          GitHub
+          <FaGithub/>
         </a>
         <a href="https://www.linkedin.com/in/abhishek-raj-surya/" target="_blank" className="hover:text-white">
-          LinkedIn
+          <FaLinkedin/>
         </a>
         <a href="mailto:abhisunny019@gmail.com" className="hover:text-white">
-          Email
+          <FaEnvelope/>
         </a>
       </div>
 

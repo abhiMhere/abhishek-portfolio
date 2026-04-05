@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { TypeAnimation } from "react-type-animation";
-
+import { FaArrowRight, FaEnvelope } from "react-icons/fa";
 export default function Hero() {
   const [active, setActive] = useState<"projects" | "contact" | null>(null);
   const [flash, setFlash] = useState(false);
@@ -103,7 +103,9 @@ export default function Hero() {
               transition={{ duration: 0.3 }}
               className="relative overflow-hidden px-6 py-3 bg-indigo-500 rounded-lg"
             >
-              View Projects
+             <span className="flex items-center gap-2">
+  View Projects <FaArrowRight />
+</span>
 
               {/* Ripple */}
               {ripples.map((ripple) => (
@@ -152,7 +154,9 @@ export default function Hero() {
               transition={{ duration: 0.3 }}
               className="relative overflow-hidden px-6 py-3 border border-gray-600 rounded-lg"
             >
-              Contact Me
+              <span className="flex items-center gap-2">
+  Contact Me <FaEnvelope />
+</span>
 
               {/* Ripple */}
               {ripples.map((ripple) => (

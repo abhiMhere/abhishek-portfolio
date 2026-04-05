@@ -1,14 +1,19 @@
 "use client";
 
 import { motion } from "framer-motion";
-// Tech stack data(apne hisab se update krna hai)
+
+// ✅ import icons
+import { FaReact, FaNodeJs, FaJava, FaGitAlt } from "react-icons/fa";
+import { SiNextdotjs, SiPython } from "react-icons/si";
+
+// ✅ updated tech stack (icon + name)
 const techStack = [
-  "React",
-  "Next.js",
-  "Java",
-  "Node.js",
-  "Python",
-  "Git",
+  { name: "React", icon: <FaReact /> },
+  { name: "Next.js", icon: <SiNextdotjs /> },
+  { name: "Java", icon: <FaJava /> },
+  { name: "Node.js", icon: <FaNodeJs /> },
+  { name: "Python", icon: <SiPython /> },
+  { name: "Git", icon: <FaGitAlt /> },
 ];
 
 export default function TechStack() {
@@ -29,7 +34,13 @@ export default function TechStack() {
               whileHover={{ scale: 1.08 }}
               className="bg-[#111827] border border-gray-800 rounded-xl p-6 text-center hover:border-cyan-400 transition"
             >
-              <p className="text-lg font-semibold">{tech}</p>
+              {/* ✅ Icon */}
+              <div className="text-3xl mb-2 text-indigo-400">
+                {tech.icon}
+              </div>
+
+              {/* Name */}
+              <p className="text-lg font-semibold">{tech.name}</p>
             </motion.div>
           ))}
         </div>

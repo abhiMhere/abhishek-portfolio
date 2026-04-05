@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 // Projects data(apne hisab se update krna hai)
 const projects = [
   {
@@ -75,14 +76,18 @@ export default function Projects() {
                   href={project.github}
                   className="text-sm px-4 py-2 border border-gray-600 rounded-md hover:border-white transition"
                 >
-                  GitHub
+                 <span className="flex items-center gap-2">
+  <FaGithub /> GitHub
+</span>
                 </a>
 
                 <a
                   href={project.live}
                   className="text-sm px-4 py-2 bg-indigo-500 rounded-md hover:bg-indigo-600 transition"
                 >
-                  Live
+                  <span className="flex items-center gap-2">
+  <FaExternalLinkAlt /> Live
+</span>
                 </a>
               </div>
             </motion.div>
