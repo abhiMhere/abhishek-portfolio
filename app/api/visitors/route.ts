@@ -2,7 +2,7 @@ import { kv } from "@vercel/kv";
 
 export async function GET() {
   try {
-    const count = await kv.incr("visitors");
+    const count = await kv.incr("visitors"); // ✅ increment
     return Response.json({ count });
   } catch (error) {
     console.error(error);
