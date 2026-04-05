@@ -1,3 +1,6 @@
+import VisitorCount from "@/components/VisitorCount";
+
+<VisitorCount />
 export default function Footer() {
   return (
     <footer id="contact" className="py-10 px-6 border-t border-gray-800 text-center text-gray-400">
