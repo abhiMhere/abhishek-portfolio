@@ -5,6 +5,7 @@ import Projects from "@/components/Projects";
 import Terminal from "@/components/Terminal";
 import Footer from "@/components/Footer";
 import CursorGlow from "@/components/CursorGlow";
+import VisitorCount from "@/components/VisitorCount";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Terminal />
       <Footer />
       <CursorGlow />
+      <VisitorCount/>
     </main>
   );
 }
